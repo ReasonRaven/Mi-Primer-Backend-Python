@@ -1,0 +1,141 @@
+.Yo {
+    width: 550px;
+    height: 450px;
+    border-radius: 100%;
+    max-width: 100%;
+
+}
+
+body {
+    background-color: rgba(128, 128, 128, 0.491) !important;
+    background-image: url(images/CodigoCaido.jpeg);
+    background-attachment: fixed;
+}
+
+.container {
+    background-color: rgb(244, 244, 230);
+}
+
+#carouselExample{
+    width: auto;
+    height: auto;
+}
+
+.mitarea {
+    background-color: rgba(93, 232, 211, 0.675);
+
+}
+
+.mitarea2 {
+    background-color: rgba(93, 232, 211, 0.675);
+}
+
+.mitarea3 {
+    background-color: rgba(93, 232, 211, 0.675);
+}
+
+.mitarea4 {
+    background-color: rgba(93, 232, 211, 0.675);
+}
+
+.face {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+
+}
+
+.insta {
+    width: 80px;
+    height: 80px;
+    margin-left: 30px;
+    border-radius: 50px;
+}
+
+.whatsapp {
+    width: 80px;
+    height: 80px;
+    margin-left: 30px;
+    border-radius: 50px;
+}
+
+h1 {
+    font-family: "Spicy Rice", serif;
+    font-weight: 400;
+
+}
+
+p {
+    font-family: "Finlandica", sans-serif;
+
+}
+
+
+
+.minombre {
+    padding-left: 140px;
+}
+
+.soy {
+    padding-left: 140px;
+}
+
+.Contratame {
+    padding-left: 140px;
+}
+
+.lenguajes {
+    padding-left: 140px;
+    padding-top: 30px;
+
+}
+
+.botoneslenguajes {
+    padding-left: 140px;
+    padding-top: 10px;
+}
+
+.mistareas {
+    padding-left: 140px;
+
+}
+
+
+.tarjetastareas {
+    padding-left: 140px;
+
+
+}
+
+.card-img-top {
+    width: 100%;
+    /* Mantén la imagen del mismo ancho que la tarjeta */
+    height: 20rem;
+    /* Ajusta la altura de la imagen según tus necesidades */
+
+}
+
+.redescontact {
+    padding-left: 140px;
+}
+
+.imagenesredes {
+
+    padding-left: 140px;
+
+}
+
+.mysqlpython {
+    padding-bottom: 25px;
+}
+
+nav {
+    background-color: aqua;
+}
+
+
+
+.descriptivo {
+    margin-top: 100px;
+    background-color: aqua;
+}
