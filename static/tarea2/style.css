@@ -1,0 +1,22 @@
+body{
+    background-color: rgb(170, 199, 199);
+}
+video {
+    height: 700px;
+    width: 700px;
+}
+
+.sketchfab-embed-wrapper{
+    padding-left: 50px;
+    width: 100px;
+    height: 300px;
+}
+.Regresar{
+    padding-left: 50px;
+}
+
+.videosketch{
+    padding-left: 100px;
+    
+    
+}

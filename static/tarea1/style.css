@@ -1,0 +1,15 @@
+body{
+    background-color: grey;
+}
+
+img {
+    position: relative;
+    width: 150px;
+    height: 15  0px;
+    left: 700px;
+    top: -290px;
+}
+.carouselExample{
+    width: 100px;
+    height: 100px;
+}

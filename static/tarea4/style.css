@@ -1,0 +1,10 @@
+.merriweather-light {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  body{
+    padding-left: 50px;
+    background-color: rgb(192, 224, 224);
+  }
