@@ -1,0 +1,25 @@
+.body {
+    background-color: #a442427d;
+}
+
+.Regresar {
+    padding-left: 235px;
+}
+
+.container {
+    padding-left: 50px;
+    background-color: rgb(188, 188, 210);
+}
+
+.card-body {
+    background-color: rgba(93, 232, 211, 0.675);
+
+}
+
+.card-img-top {
+    width: 100%;
+    /* Mantén la imagen del mismo ancho que la tarjeta */
+    height: 20rem;
+    /* Ajusta la altura de la imagen según tus necesidades */
+
+}

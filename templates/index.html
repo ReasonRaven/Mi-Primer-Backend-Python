@@ -67,6 +67,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#redes">Mis redes</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('misProyectos')}}"
+                                style="text-decoration: underline;">Todos mis Proyectos</a>
+                        </li>
 
 
 
@@ -118,14 +122,19 @@
                 <hr>
 
                 <!--Tarjetas de las tareas-->
-                <h1 class="mistareas" id="tareass">Mis tareas / proyectos</h1>
+                <h1 class="mistareas" id="tareass">Mis tareas / proyectos
+                    <a href="{{ url_for('misProyectos')}}"><button type="button" class="btn btn-warning">Todos
+                            mis proyectos click aqui
+                        </button>
+                    </a>
+                </h1>
 
                 <div class="tarjetastareas">
                     <div class="row">
 
                         <div class="col-lg-4 col-sm-12 mb-3">
 
-                            <a href="static/tarea1/mi_Pagina_WEB.html">
+                            <a href="{{ url_for('pagina')}}">
                                 <div class="card" style="width: 18rem;">
                                     <img src="static/images/SSdemipag.png" class="card-img-top"
                                         alt="imagen de mi pagina">
@@ -140,7 +149,7 @@
 
 
                         <div class="col-lg-4 col-sm-12 mb-3">
-                            <a href="static/tarea2/scanerKoala.html">
+                            <a href="{{ url_for('koala')}}">
                                 <div class="card" style="width: 18rem;">
                                     <img src="static/images/poly-snapshot.jpg" class="card-img-top"
                                         alt="Imagen de un koala">
@@ -156,7 +165,7 @@
 
 
                         <div class="col-lg-4 col-sm-12 mb-3">
-                            <a href="static/tarea3/reporte.html">
+                            <a href="{{ url_for('reporte')}}">
                                 <div class="card" style="width: 18rem;">
                                     <img src="static/images/VR.jpeg" class="card-img-top" alt="Imagen de un VR">
                                     <div class="mitarea3">
@@ -171,7 +180,7 @@
 
 
                         <div class="col-lg-4 col-sm-12 mb-3">
-                            <a href="static/tarea4/frameworks.html">
+                            <a href="{{ url_for('frameworks')}}">
                                 <div class="card" style="width: 18rem;">
                                     <img src="static/images/Frameworks.png" class="card-img-top"
                                         alt="Imagen de frameworks">
@@ -200,7 +209,7 @@
 
 
                         <div class="col-lg-4 col-sm-12 mb-3">
-                            <a href="static/tarea6/stackOverflow.html">
+                            <a href="{{ url_for('stackoverflow')}}">
                                 <div class="card" style="width: 18rem;">
                                     <img src="static/images/StackOverflow.png" class="card-img-top"
                                         alt="imagen de StackOverflow">
