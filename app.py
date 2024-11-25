@@ -30,6 +30,9 @@ def frameworks():
 @app.route('/stackoverflow')
 def stackoverflow():
     return render_template('stackOverflow.html')
+@app.route('/platicaModeva')
+def platicaModeva():
+    return render_template('platicaModeva.html')
 @app.route('/success', methods=['POST'])
 def success():
     email = request.form['email']

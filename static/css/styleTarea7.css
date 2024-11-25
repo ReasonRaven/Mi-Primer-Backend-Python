@@ -1,0 +1,19 @@
+body{
+    background-color: aqua !important;
+}
+h1{
+    text-align: center;
+}
+
+#imagen1{
+    width: 405px;
+    height: 500px;
+}
+#imagen2{
+    width: 405px;
+    height: 500px;
+}
+#imagen3{
+    width: 405px;
+    height: 500px;
+}

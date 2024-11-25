@@ -32,7 +32,7 @@
           <div class="card-body">
             <h5 class="card-title">Tarea 1</h5>
             <p class="card-text">Mi primera pagina web que hice.</p>
-            <a href="../tarea1/mi_Pagina_WEB.html" class="btn btn-danger">Ir al proyecto</a>
+            <a href="{{ url_for('pagina')}}" class="btn btn-danger">Ir al proyecto</a>
           </div>
         </div>
       </div>
@@ -43,29 +43,29 @@
           <div class="card-body">
             <h5 class="card-title">Tarea 2</h5>
             <p class="card-text">Escaneo de un objeto.</p>
-            <a href="../tarea2/scanerKoala.html" class="btn btn-danger">Ir al proyecto</a>
+            <a href="{{ url_for('koala')}}" class="btn btn-danger">Ir al proyecto</a>
           </div>
         </div>
       </div>
 
       <div class="col">
         <div class="card" style="width: 18rem;">
-          <img src="/Mi Portafolio/assets/images/VR.jpeg" class="card-img-top" alt="...">
+          <img src="static/images/VR.jpeg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Tarea 3</h5>
             <p class="card-text">Reporte sobre el VR.</p>
-            <a href="../tarea3/reporte.html" class="btn btn-danger">Ir al proyecto</a>
+            <a href="{{ url_for('reporte')}}" class="btn btn-danger">Ir al proyecto</a>
           </div>
         </div>
       </div>
 
       <div class="col">
         <div class="card" style="width: 18rem;">
-          <img src="/Mi Portafolio/assets/images/Frameworks.png" class="card-img-top" alt="...">
+          <img src="static/images/frameworks.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Tarea 4</h5>
             <p class="card-text">Frameworks de apps pupulares.</p>
-            <a href="../tarea4/frameworks.html" class="btn btn-danger">Ir al proyecto</a>
+            <a href="{{ url_for('frameworks')}}" class="btn btn-danger">Ir al proyecto</a>
           </div>
         </div>
       </div>
@@ -74,33 +74,33 @@
 
       <div class="col">
         <div class="card" style="width: 18rem;">
-          <img src="/Mi Portafolio/tarea5/Ahorcado.png" class="card-img-top" alt="...">
+          <img src="static/images/Ahorcado.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Tarea 5</h5>
             <p class="card-text">Codigo en .py (Se descarga el codigo).</p>
-            <a href="../tarea5/ejemAhorcado.py" class="btn btn-danger">Ir al proyecto</a>
+            <a href="static/tarea5/ejemAhorcado.py" class="btn btn-danger">Ir al proyecto</a>
           </div>
         </div>
       </div>
 
       <div class="col">
         <div class="card" style="width: 18rem;">
-          <img src="/Mi Portafolio/assets/images/StackOverflow.png" class="card-img-top" alt="...">
+          <img src="static/images/StackOverflow.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Tarea 6</h5>
             <p class="card-text">Presentacion sobre el stackOverflow.</p>
-            <a href="../tarea6/stackOverflow.html" class="btn btn-danger">Ir al proyecto</a>
+            <a href="{{ url_for('stackoverflow')}}" class="btn btn-danger">Ir al proyecto</a>
           </div>
         </div>
       </div>
 
       <div class="col">
         <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
+          <img src="static/images/modeva.png" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to .</p>
-            <a href="#" class="btn btn-danger">Ir al proyecto</a>
+            <h5 class="card-title">Tarea 7</h5>
+            <p class="card-text">Resumen de la platica.</p>
+            <a href="{{ url_for('platicaModeva')}}" class="btn btn-danger">Ir al proyecto</a>
           </div>
         </div>
       </div>
