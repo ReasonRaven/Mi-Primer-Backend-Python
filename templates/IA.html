@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styleTarea8.css')}}">
+</head>
+
+<body>
+    <div class="container">
+        <a href="{{ url_for('home')}}">Regresar</a>
+        <br>
+        <hr>
+        <h1>IA Teachable Machine</h1>
+        <h3>¿Qué es Teachable Machine?</h3>
+        <p>Es una IA que dependiendo de lo que le pongas frente a la camara identificara que es. Esto funciona por que anteriromente ya ha sido entrenada con esos obejtos para que pueda identificar que son. <br>
+        Puede cometer errores obviamente pero funciona.</p>
+        <hr>
+        <h2>Esta es una IA que prendera tu camara y puedes probar como funciona</h2>
+        <h3>De click en el boton Comenzar <h4>Solo de click una vez y autoorize su camara, no vuelva a darle click de nuevo o abrira nuevamente otra camara</h4></h3>
+        
+        <button type="button"  onclick="init()">Comenzar</button>
+        <div id="webcam-container"></div>
+        <div id="label-container"></div>
+        <br>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+        <script type="text/javascript">
+            const URL = "https://teachablemachine.withgoogle.com/models/YABicmzt3/";
+
+            let model, webcam, labelContainer, maxPredictions;
+
+            async function init() {
+                const modelURL = URL + "model.json";
+                const metadataURL = URL + "metadata.json";
+
+                // Cargar el modelo y sus metadatos
+                model = await tmImage.load(modelURL, metadataURL);
+                maxPredictions = model.getTotalClasses();
+
+                // Configurar la cámara
+                const flip = true; // invertir la cámara
+                webcam = new tmImage.Webcam(700, 700, flip);
+                await webcam.setup(); // solicitar acceso a la cámara
+                await webcam.play();
+                window.requestAnimationFrame(loop);
+
+                // Agregar el canvas y las etiquetas al DOM
+                document.getElementById("webcam-container").appendChild(webcam.canvas);
+                labelContainer = document.getElementById("label-container");
+                for (let i = 0; i < maxPredictions; i++) {
+                    // Crear un contenedor para cada etiqueta
+                    const labelElement = document.createElement("div");
+
+                    // Texto de la etiqueta
+                    const textLabel = document.createElement("div");
+                    textLabel.className = "custom-label";
+                    textLabel.id = `label-text-${i}`;
+                    textLabel.innerHTML = "Loading...";
+
+                    // Barra de progreso
+                    const progressBar = document.createElement("div");
+                    progressBar.className = `progress-bar color-${getColorClass(i)}`;
+                    const progressBarInner = document.createElement("div");
+                    progressBarInner.className = "progress-bar-inner";
+                    progressBarInner.id = `progress-bar-${i}`;
+
+                    // Etiqueta de porcentaje dentro de la barra
+                    const progressLabel = document.createElement("span");
+                    progressLabel.className = "progress-label";
+                    progressLabel.id = `progress-label-${i}`;
+                    progressBarInner.appendChild(progressLabel);
+
+                    // Agregar elementos
+                    progressBar.appendChild(progressBarInner);
+                    labelElement.appendChild(textLabel);
+                    labelElement.appendChild(progressBar);
+                    labelContainer.appendChild(labelElement);
+                }
+            }
+
+            // Animación del loop
+            async function loop() {
+                webcam.update(); // actualizar el frame de la cámara
+                await predict();
+                window.requestAnimationFrame(loop);
+            }
+
+            // Predicción y actualización de las barras de progreso
+            async function predict() {
+                const prediction = await model.predict(webcam.canvas);
+                for (let i = 0; i < maxPredictions; i++) {
+                    const probability = Math.round(prediction[i].probability * 100); // Convertir a porcentaje
+                    const className = prediction[i].className;
+
+                    // Actualizar el texto de la etiqueta
+                    const textLabel = document.getElementById(`label-text-${i}`);
+                    textLabel.innerHTML = className;
+
+                    // Actualizar la barra de progreso
+                    const progressBarInner = document.getElementById(`progress-bar-${i}`);
+                    progressBarInner.style.width = `${probability}%`;
+
+                    // Actualizar el porcentaje en la barra
+                    const progressLabel = document.getElementById(`progress-label-${i}`);
+                    progressLabel.innerHTML = `${probability}%`;
+                }
+            }
+
+            // Función para asignar colores personalizados a cada barra
+            function getColorClass(index) {
+                const colors = ["orange", "red", "purple"];
+                return colors[index % colors.length];
+            }
+        </script>
+
+    </div>
+
+</body>
+
+</html>

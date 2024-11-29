@@ -33,6 +33,9 @@ def stackoverflow():
 @app.route('/platicaModeva')
 def platicaModeva():
     return render_template('platicaModeva.html')
+@app.route('/IA')
+def IApractica():
+    return render_template('IA.html')
 @app.route('/success', methods=['POST'])
 def success():
     email = request.form['email']

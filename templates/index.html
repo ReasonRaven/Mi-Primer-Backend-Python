@@ -8,7 +8,7 @@
 
     <title>Mi portafolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styleGeneral.css')}}">
     <link rel="stylesheet" href="java.js">
     <link rel="icon" href="static/images/Yo.ico">
 
@@ -140,7 +140,7 @@
                                         alt="imagen de mi pagina">
                                     <div class="mitarea">
                                         <div class="card-body">
-                                            <p class="card-text">Tarea 1.</p>
+                                            <p class="card-text">Tarea 1 Mi primera pagina.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -155,7 +155,7 @@
                                         alt="Imagen de un koala">
                                     <div class="mitarea2">
                                         <div class="card-body">
-                                            <p class="card-text">Tarea 2.</p>
+                                            <p class="card-text">Tarea 2 Escaner de obeto.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -170,7 +170,7 @@
                                     <img src="static/images/VR.jpeg" class="card-img-top" alt="Imagen de un VR">
                                     <div class="mitarea3">
                                         <div class="card-body">
-                                            <p class="card-text">Tarea 3.</p>
+                                            <p class="card-text">Tarea 3 Reporte de VR.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -186,7 +186,7 @@
                                         alt="Imagen de frameworks">
                                     <div class="mitarea4">
                                         <div class="card-body">
-                                            <p class="card-text">Tarea 4.</p>
+                                            <p class="card-text">Tarea 4 Investigacion de Frameworks.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -216,7 +216,7 @@
                                         alt="imagen de StackOverflow">
                                     <div class="mitarea4">
                                         <div class="card-body">
-                                            <p class="card-text">Tarea 6.</p>
+                                            <p class="card-text">Tarea 6 Presentacion de StackOverflow.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -226,11 +226,24 @@
                         <div class="col-lg-4 col-sm-12 mb-3">
                             <a href="{{ url_for('platicaModeva')}}">
                                 <div class="card" style="width: 18rem;">
-                                    <img src="static/images/modeva.png" class="card-img-top"
-                                        alt="imagen del juego del ahorcado">
+                                    <img src="static/images/modeva.png" class="card-img-top" alt="imagen de Modeva">
                                     <div class="mitarea4">
                                         <div class="card-body">
-                                            <p class="card-text">Tarea 7 Platica</p>
+                                            <p class="card-text">Tarea 7 Platica.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-4 col-sm-12 mb-3">
+                            <a href="{{ url_for('IApractica')}}">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="static/images/TeachableMachine.png" class="card-img-top"
+                                        alt="imagen de TeachableMachine">
+                                    <div class="mitarea4">
+                                        <div class="card-body">
+                                            <p class="card-text">Tarea 8 IA.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -247,23 +260,38 @@
                     <p class="fs-1" id="redes">Mis redes sociales para contactarme</p>
 
                 </div>
+
+
+
                 <div class="imagenesredes">
 
-                    <a href="https://www.facebook.com/profile.php?id=100006225014533">
+                    <a href="https://www.facebook.com/profile.php?id=100006225014533" target="_blank">
                         <img src="static/images/face.png" alt="facebook" class="face">
                     </a>
 
 
-                    <a href="https://www.instagram.com/reason_raven/">
+                    <a href="https://www.instagram.com/reason_raven/" target="_blank">
                         <img src="static/images/images.jpeg" alt="instagram" class="insta">
                     </a>
 
 
-                    <a href="https://wa.me/522461747159?text=[Hola]">
+                    <a href="https://wa.me/522461747159?text=[Hola]" target="_blank">
                         <img src="static/images/whatsapp.png" alt="whatsapp" class="whatsapp">
                     </a>
-                </div>
 
+                    <a href="https://github.com/reasonraven" target="_blank">
+                        <img src="static/images/Github.jpeg" alt="Imagen de Github" class="github">
+                    </a>
+
+                    <a href="https://www.youtube.com/@reasonraven2633" target="_blank">
+                        <img src="static/images/Youtube.png" alt="Imagen de Youtube" class="youtube">
+                    </a>
+                </div>
+                <br>
+                <div class="correos">
+                    <h6>Mi correo institucional: 200417@iberopuebla.com</h6>
+                    <h6>Mi correo personal: jonathan23_09@outlook.com</h6>
+                </div>
                 <br>
 
                 <form action="" method="post">
@@ -279,6 +307,8 @@
             </div>
         </div>
 
+        <hr>
+        <br>
 
 
 
